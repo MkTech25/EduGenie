@@ -22,17 +22,13 @@ EduMentor is a user-friendly, AI-powered educational assistant built with Stream
     Download your chat session as a PDF for offline review or sharing.
 
 🛠 Requirements
-
+Update  -  GOOGLE_API_KEY
 To run the application, you need:
 
     Python 3.8+
-
     Streamlit
-
     PyPDF2
-
     gTTS
-
     FPDF
 
 You can install dependencies using:
@@ -40,7 +36,6 @@ You can install dependencies using:
 pip install -r requirements.txt
 
 Example requirements.txt:
-
 streamlit
 PyPDF2
 gTTS
