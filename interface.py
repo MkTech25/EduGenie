@@ -46,8 +46,8 @@ with st.sidebar:
 
     st.markdown("---")
     st.subheader("👤 Developer")
-    st.markdown("[Pachaiappan ❤️](https://mr-vicky-01.github.io/Portfolio)")
-    st.markdown("📧 [Email](mailto:pachaiappan1102@gamil.com)")
+    st.markdown("Murali Kumar")
+    st.markdown("📧 [Email](mailto:muralikumar.n@yahoo.com)")
     st.markdown("---")
 
 # TTS
