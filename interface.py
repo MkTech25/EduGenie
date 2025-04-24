@@ -12,7 +12,7 @@ from fpdf import FPDF
 model = Model()
 
 # Page Config
-st.set_page_config(page_title="EduMentor - AI Assistant", page_icon="📖", layout="centered")
+st.set_page_config(page_title="EduGenie - AI Assistant", page_icon="📖", layout="centered")
 
 # Style
 st.markdown("""
@@ -25,10 +25,10 @@ st.markdown("""
 
 # Sidebar
 with st.sidebar:
-    st.title("🧠 About EduMentor")
+    st.title("🧠 About EduGenie")
     st.caption("""
         <div class="justified-text">
-           EduMentor is an AI-powered educational assistant designed to help students by:
+           EduGenie is an AI-powered educational assistant designed to help students by:
            <ul>
                <li><strong>Answering Questions:</strong> Get quick and accurate answers to your academic queries.</li>
                <li><strong>Explaining Concepts:</strong> Receive detailed explanations of complex subjects.</li>
@@ -70,7 +70,7 @@ def extract_text_from_pdf(pdf_file):
 
 # Chat Mode
 if choice == "❓ Ask a Question":
-    st.subheader("💬 Chat with EduMentor")
+    st.subheader("💬 Chat with EduGenie")
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
@@ -96,12 +96,12 @@ if choice == "❓ Ask a Question":
             pdf.set_auto_page_break(auto=True, margin=15)
             pdf.set_font("Arial", size=12)
 
-            pdf.set_title("EduMentor Chat History")
-            pdf.cell(200, 10, txt="EduMentor Chat History", ln=True, align="C")
+            pdf.set_title("EduGenie Chat History")
+            pdf.cell(200, 10, txt="EduGenie Chat History", ln=True, align="C")
             pdf.ln(10)
 
             for role, msg in st.session_state.chat_history:
-                role_label = "You" if role == "user" else "EduMentor"
+                role_label = "You" if role == "user" else "EduGenie"
                 pdf.multi_cell(0, 10, f"{role_label}: {msg}", align='L')
                 pdf.ln(1)
 
@@ -111,7 +111,7 @@ if choice == "❓ Ask a Question":
                     st.download_button(
                         label="📥 Download PDF",
                         data=file,
-                        file_name="edu_chat_history.pdf",
+                        file_name="EduGenie_chat_history.pdf",
                         mime="application/pdf"
                     )
 
